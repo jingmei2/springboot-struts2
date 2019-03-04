@@ -41,20 +41,26 @@
         <th>state</th>
         <th>country</th>
     </tr>
-    <s:iterator value="cityList">
-        <tr class="<s:if test="id%2==0">even</s:if><s:else>odd</s:else>">
-            <td align="center"><s:property value="id"/></td>
-            <td><s:property value="name"/></td>
-            <td><s:property value="state"/></td>
+    <s:iterator value="cities" var="city" status='st'>
+        <tr class="<s:if test="#st.id%2==0">even</s:if><s:else>odd</s:else>">
+            <td align="center"><s:property value="#st.id"/></td>
+            <td><s:property value="#city.value"/></td>
+            <td><s:property value="city.state"/></td>
             <td align="center"><s:property value="country"/></td>
         </tr>
     </s:iterator>
+
+    <br/>======iterator String array======<br/>
+    <s:iterator value="arryStr" var="array">
+        <s:property value="array"/><br/>
+    </s:iterator>
+    <div></div>
 </table>
 </body>
 <script>
-    var cityList = ${cityList};
-    console.info(cityList);
-    console.info(<%=request.getContextPath()%>);
-    console.info(<%=request.getRealPath("/")%>);
+    <%--var cityList = ${cityList};--%>
+    <%--console.info(cityList);--%>
+    <%--console.info(<%=request.getContextPath()%>);--%>
+    <%--console.info(<%=request.getRealPath("/")%>);--%>
 </script>
 </html>
