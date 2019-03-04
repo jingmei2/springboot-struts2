@@ -1,7 +1,6 @@
 package com.zfsoft.zftal;
 
 import com.zfsoft.zftal.service.CityService;
-import com.zfsoft.zftal.service.ServiceFacade;
 import org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,13 +12,14 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+//定义全局事务
+@EnableTransactionManagement
 @SpringBootApplication
 @MapperScan("com.zfsoft.zftal.mapper") // 定义了在哪里扫描mapper文件
 public class DemoApplication extends SpringBootServletInitializer implements ApplicationRunner {
 
-//    @Autowired
-//    private ServiceFacade userService;
     @Autowired
     private CityService cityService;
 

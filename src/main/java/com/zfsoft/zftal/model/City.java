@@ -3,6 +3,9 @@ package com.zfsoft.zftal.model;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * @author Administrator
+ */
 public class City implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -14,8 +17,17 @@ public class City implements Serializable {
 
     private String country;
 
-    private Date date;
+    private Date date ;
 
+//    public City(){}
+//
+//    public City(Long id, String name, String state, String country, Date date) {
+//        this.id = id;
+//        this.name = name;
+//        this.state = state;
+//        this.country = country;
+//        this.date = date;
+//    }
 
     public Long getId() {
         return id;

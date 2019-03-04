@@ -37,20 +37,24 @@
 <table>
     <tr>
         <th>ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Age</th>
-        <th>Gender</th>
+        <th>name</th>
+        <th>state</th>
+        <th>country</th>
     </tr>
-    <s:iterator value="users">
+    <s:iterator value="cityList">
         <tr class="<s:if test="id%2==0">even</s:if><s:else>odd</s:else>">
             <td align="center"><s:property value="id"/></td>
-            <td><s:property value="firstName"/></td>
-            <td><s:property value="lastName"/></td>
-            <td align="center"><s:property value="age"/></td>
-            <td><s:if test="gender == 'M'">Male</s:if><s:else>Female</s:else></td>
+            <td><s:property value="name"/></td>
+            <td><s:property value="state"/></td>
+            <td align="center"><s:property value="country"/></td>
         </tr>
     </s:iterator>
 </table>
 </body>
+<script>
+    var cityList = ${cityList};
+    console.info(cityList);
+    console.info(<%=request.getContextPath()%>);
+    console.info(<%=request.getRealPath("/")%>);
+</script>
 </html>
