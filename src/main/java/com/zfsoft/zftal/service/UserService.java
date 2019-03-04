@@ -16,7 +16,7 @@ import org.springframework.util.Assert;
  *
  * @create: 2019-03-01 15:48
  **/
-@Service("userService")
+//@Service("userService")
 public class UserService implements ServiceFacade {
 
     @Autowired

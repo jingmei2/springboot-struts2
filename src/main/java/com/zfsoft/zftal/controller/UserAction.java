@@ -23,7 +23,7 @@ import java.util.List;
  *
  * @create: 2019-03-01 15:50
  **/
-@Component
+//@Component
 public class UserAction extends ActionSupport {
 
     private static final long serialVersionUID = 1L;

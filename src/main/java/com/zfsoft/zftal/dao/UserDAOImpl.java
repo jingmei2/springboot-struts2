@@ -19,7 +19,7 @@ import java.util.List;
  *
  * @create: 2019-03-01 15:45
  **/
-@Repository
+//@Repository
 public class UserDAOImpl implements UserDao {
 
     @Autowired
