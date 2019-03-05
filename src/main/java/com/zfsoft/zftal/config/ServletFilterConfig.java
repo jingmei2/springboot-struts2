@@ -26,7 +26,7 @@ import org.springframework.context.annotation.Configuration;
  * @author Administrator
  *
  */
-@Configuration
+//@Configuration
 public class ServletFilterConfig {
 
     /**
@@ -45,9 +45,9 @@ public class ServletFilterConfig {
      * 而路径如果不配置的话默认的就是拦截所有路径
      * @return
      */
-    @Bean
-    public StrutsPrepareAndExecuteFilter strutsPrepareAndExecuteFilter(){
-        return new StrutsPrepareAndExecuteFilter();
-    }
+//    @Bean
+//    public StrutsPrepareAndExecuteFilter strutsPrepareAndExecuteFilter(){
+//        return new StrutsPrepareAndExecuteFilter();
+//    }
 
 }

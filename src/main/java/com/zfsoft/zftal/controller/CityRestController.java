@@ -2,6 +2,7 @@ package com.zfsoft.zftal.controller;
 
 import com.zfsoft.zftal.model.City;
 import com.zfsoft.zftal.service.CityService;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -13,7 +14,8 @@ import java.util.List;
  * @ModelAttribute 获取post请求方法参数
  */
 
-@RestController
+//@RestController
+@Controller
 @CrossOrigin(origins = "*")
 @RequestMapping("/api")
 public class CityRestController {
