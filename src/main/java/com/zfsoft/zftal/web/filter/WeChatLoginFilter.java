@@ -1,6 +1,9 @@
-package com.zfsoft.zftal.filter;
+package com.zfsoft.zftal.web.filter;
+
+import org.springframework.context.annotation.Bean;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -11,6 +14,7 @@ import java.io.IOException;
  * @date 2015-6-26
  * @version V1.0.0
  */
+@WebFilter
 public class WeChatLoginFilter implements Filter {
 
 	public final static String STATE="LOGIN_BY_WEIXIN";
