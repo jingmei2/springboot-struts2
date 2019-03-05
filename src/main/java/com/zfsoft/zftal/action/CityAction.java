@@ -44,6 +44,7 @@ public class CityAction extends BaseAction {
     //遍历数组,可以在 jsp 页面直接显示,但是需要增加 get set
     //页面上获取数据,可以 Struts 标签,也可以${xxx}
     //getValueStack也可以保存数据,提供给页面使用
+    //getValueStack().set("cities", cities); getValueStack().set("cityList", JSONUtils.obj2json(cities));在页面需要json的时候，才转成json数据传到前台
 
     private String [] arryStr;
 
@@ -63,7 +64,7 @@ public class CityAction extends BaseAction {
         arryStr =new String[]{"admin","loclku","kinqij","junsldu","uonyulu"};
 
         cities = cityService.getAll();
-        getValueStack().set("cities", JSONUtils.obj2json(cities));
+//        getValueStack().set("cities", cities);
         return SUCCESS;
     }
 }

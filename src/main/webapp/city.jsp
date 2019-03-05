@@ -41,12 +41,12 @@
         <th>state</th>
         <th>country</th>
     </tr>
-    <s:iterator value="cities" var="city" status='st'>
+    <s:iterator value="cities" var="city" status="st" >
         <tr class="<s:if test="#st.id%2==0">even</s:if><s:else>odd</s:else>">
-            <td align="center"><s:property value="#st.id"/></td>
-            <td><s:property value="#city.value"/></td>
-            <td><s:property value="city.state"/></td>
-            <td align="center"><s:property value="country"/></td>
+            <td align="center" id="id"><s:property value="#city.id"/></td>
+            <td><s:property value="#city.name"/></td>
+            <td><s:property value="#city"/></td>
+            <td align="center">${city}</td>
         </tr>
     </s:iterator>
 
@@ -58,8 +58,8 @@
 </table>
 </body>
 <script>
-    <%--var cityList = ${cityList};--%>
-    <%--console.info(cityList);--%>
+    var cities = ${cities};
+    console.info(cities);
     <%--console.info(<%=request.getContextPath()%>);--%>
     <%--console.info(<%=request.getRealPath("/")%>);--%>
 </script>
