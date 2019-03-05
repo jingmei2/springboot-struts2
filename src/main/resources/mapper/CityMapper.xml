@@ -14,9 +14,9 @@
     </resultMap>
 
     <select id="findByProvinceId" resultMap="BaseResultMap">
-        select * from city where id = #{id}
+        select * from "city" where "id" = #{id}
     </select>
     <select id="findAll" resultMap="BaseResultMap">
-        select * from city where 1=1
+        select * from "city" where 1=1
     </select>
 </mapper>
