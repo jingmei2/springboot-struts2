@@ -16,8 +16,6 @@ import java.util.List;
 
 //@RestController
 @Controller
-@CrossOrigin(origins = "*")
-@RequestMapping("/api")
 public class CityRestController {
     @Resource
     private CityService cityService;

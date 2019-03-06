@@ -7,7 +7,12 @@ import com.zfsoft.zftal.model.City;
 import com.zfsoft.zftal.service.CityService;
 import com.zfsoft.zftal.utils.JSONUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+import javax.xml.ws.Action;
 import java.util.List;
 
 /**
@@ -20,7 +25,14 @@ import java.util.List;
  * @create: 2019-03-01 15:50
  **/
 //@Component
+@Controller
+@RequestMapping("/user")
 public class CityAction extends BaseAction {
+
+//    @GetMapping("/")
+//    public String index() {
+//        return "redirect:/error";
+//    }
 
     private static final long serialVersionUID = 1L;
     private List<City> cities;
@@ -59,6 +71,7 @@ public class CityAction extends BaseAction {
         return SUCCESS;
     }
 
+    @Action(input="/query")
     public String getCityList(){
 
         arryStr =new String[]{"admin","loclku","kinqij","junsldu","uonyulu"};
