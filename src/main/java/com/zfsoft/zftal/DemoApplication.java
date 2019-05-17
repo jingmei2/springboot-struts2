@@ -1,8 +1,7 @@
 package com.zfsoft.zftal;
 
 import com.zfsoft.zftal.service.CityService;
-import org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter;
-import org.mybatis.spring.annotation.MapperScan;
+import tk.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -33,14 +32,14 @@ public class DemoApplication extends SpringBootServletInitializer implements App
         SpringApplication.run(DemoApplication.class, args);
     }
 
-    @Bean
-    public FilterRegistrationBean filterRegistrationBean() {
-        FilterRegistrationBean registrationBean = new FilterRegistrationBean();
-        StrutsPrepareAndExecuteFilter struts = new StrutsPrepareAndExecuteFilter();
-        registrationBean.setFilter(struts);
-        registrationBean.setOrder(1);
-        return registrationBean;
-    }
+//    @Bean
+//    public FilterRegistrationBean filterRegistrationBean() {
+//        FilterRegistrationBean registrationBean = new FilterRegistrationBean();
+//        StrutsPrepareAndExecuteFilter struts = new StrutsPrepareAndExecuteFilter();
+//        registrationBean.setFilter(struts);
+//        registrationBean.setOrder(1);
+//        return registrationBean;
+//    }
 
     @Override
     public void run(ApplicationArguments args) throws Exception {

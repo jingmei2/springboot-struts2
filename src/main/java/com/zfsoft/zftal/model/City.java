@@ -1,22 +1,28 @@
 package com.zfsoft.zftal.model;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
 /**
  * @author Administrator
  */
+@Table(name = "CITY")
 public class City implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    @Id
+    @Column(name = "ID")
     private Long id;
-
+    @Column(name = "NAME")
     private String name;
-
+    @Column(name = "STATE")
     private String state;
-
+    @Column(name = "COUNTRY")
     private String country;
-
+    @Column(name = "SUBDATE")
     private Date date ;
 
 //    public City(){}

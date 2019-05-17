@@ -223,6 +223,8 @@ mybatis:
   base-package: com.zfsoft.**.dao
   #Mapper.xml匹配规则
   mapper-locations: classpath:mapper/*/*.xml
+  #配置驼峰下划线
+  #    map-underscore-to-camel-case: true
 
 
 
@@ -246,7 +248,6 @@ mybatis:
 mapper:
   mappers:
     - tk.mybatis.mapper.common.Mapper
-    - tk.mybatis.mapper.common.Mapper2
   notEmpty: true
 ################################################################################################################
 ###ZFtal安全组件（跨域、XSS等）配置：

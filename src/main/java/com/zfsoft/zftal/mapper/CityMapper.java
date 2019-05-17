@@ -11,30 +11,30 @@ import java.util.List;
  * @author Administrator*/
 //@Mapper
 public interface CityMapper {
-    @Select("select * from \"city\" where \"id\" = #{id}")
+    @Select("select * from CITY where ID = #{id}")
     // 返回结果实体属性与数据库字段转换
     @Results({
             @Result(property = "id", column = "id"),
             @Result(property = "name", column = "name"),
             @Result(property = "state", column = "state"),
             @Result(property = "country", column = "country"),
-            @Result(property = "date", column = "date")
+            @Result(property = "subdate", column = "date")
     })
     City findByProvinceId(@Param("id") Long id);
 
     /** 查询全部 */
-    @Select("select * from \"city\"")
+    @Select("select * from CITY")
     List<City> findAll();
 
     /** 创建 */
-    @Select("insert into \"city\" values(uuid(), #{name})")
+    @Select("insert into CITY values(uuid(), #{name})")
     String createCity(@ModelAttribute City city);
 
     /** 更新 */
-    @Select("update \"city\" set name=#{name} where id=#{id}")
+    @Select("update CITY set name=#{name} where ID=#{id}")
     void updateCity(@ModelAttribute City city);
 
     /** 删除 */
-    @Select("delete from \"city\" where \"id\"=#{id}")
+    @Select("delete from CITY where ID=#{id}")
     void deleteCity(String id);
 }

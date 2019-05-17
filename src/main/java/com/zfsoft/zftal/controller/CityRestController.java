@@ -14,8 +14,8 @@ import java.util.List;
  * @ModelAttribute 获取post请求方法参数
  */
 
-//@RestController
-@Controller
+@RestController
+//@Controller
 public class CityRestController {
     @Resource
     private CityService cityService;

@@ -12,9 +12,6 @@ package com.zfsoft.zftal.config;/**
  * @create: 2019-03-04 11:43
  **/
 
-import org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * 这个类是集合SpringBoot集成struts2的关键
